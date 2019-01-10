@@ -6,12 +6,14 @@ $red:#EF4870;
 $blue:#56A1CB;
 $textmain:#4D4A51;
 $textlight: rgba($textmain,.6);
-$background: #edf5e1;
+$background: #ffffff;
 
 // Fonts
-$default-font: "roboto-example", sans-serif
+$default-font: "roboto-example", sans-serif;
 
 
+	
+$statetransition: all 300ms ease-in-out;
 //Font-size
 //$big: 24px;
 //$main: 16px;

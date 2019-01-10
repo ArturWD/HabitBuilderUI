@@ -1,13 +1,21 @@
 .header{
     height: 64px;
     width: 100%;
-    background-color: blue;
+    background-color: $background;
     padding: 0 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
+	border-bottom: 1px solid rgba($textlight, .3);
+	transition: $statetransition;
+	
+	&--scrolled{
+		box-shadow: 0px 2px 4px rgba($textlight, .4);
+
+	}
 }
+
 .header-profile{
     position: relative;
 }
@@ -23,4 +31,24 @@
     color: $background;
     text-align: center;
     line-height: 40px;
+}
+.todayview-container{
+	display: flex;
+	min-height: 100vh;
+}
+.todayview-container__categories-spacer{
+	width: 220px;
+	background-color: blue;
+}
+.todayview-container__habits{
+	flex: 1;
+	//background-color: orange;
+}
+.caterories{
+	position: fixed;
+	background-color: orange;
+	width: 220px;
+	height: calc(100vh - 64px);
+	top: 64px;
+	overflow-y: auto;
 }
