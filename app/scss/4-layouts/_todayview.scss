@@ -1,0 +1,26 @@
+.header{
+    height: 64px;
+    width: 100%;
+    background-color: blue;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+}
+.header-profile{
+    position: relative;
+}
+.profile-menu{
+    position: absolute;
+    display: none;
+}
+.profile-button{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: $maingreen;
+    color: $background;
+    text-align: center;
+    line-height: 40px;
+}
