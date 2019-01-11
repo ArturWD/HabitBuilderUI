@@ -38,17 +38,39 @@
 }
 .todayview-container__categories-spacer{
 	width: 220px;
-	background-color: blue;
 }
 .todayview-container__habits{
 	flex: 1;
-	//background-color: orange;
 }
 .caterories{
 	position: fixed;
-	background-color: orange;
+	//background-color: orange;
 	width: 220px;
 	height: calc(100vh - 64px);
 	top: 64px;
 	overflow-y: auto;
 }
+
+.caterories::-webkit-scrollbar {
+    width: 8px;
+}
+
+.caterories::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba($textlight, .2); 
+    border-radius: 10px;
+}
+
+.caterories::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba($textlight, .3); 
+}
+
+
+.main-container{
+	width: 100%;
+	max-width: 1248px;
+	padding: 0 24px;
+	margin: 0 auto;
+}
+
+
