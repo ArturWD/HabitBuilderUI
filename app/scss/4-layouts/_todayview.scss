@@ -14,10 +14,23 @@
 		box-shadow: 0px 2px 4px rgba($textlight, .4);
 
 	}
+    
+    &__profile{
+        position: relative;
+    }
+    
+    &__logo-imgfull{
+        height: 40px;
+        width: auto;
+    }
+    &__logo-imgsmall{
+        display: none;
+    }
+    
 }
 
 .header__profile{
-    position: relative;
+    
 }
 
 .profile-button{
