@@ -1,0 +1,43 @@
+.card{
+    border-radius: $radius;
+    border: 2px solid $maingreen;
+    overflow: hidden;
+    padding: 8px 24px;
+    background-color: rosybrown;
+    position: relative;
+
+    
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__more-button{
+        border: none;
+        padding: 8px;
+        background-color: transparent;
+        cursor: pointer
+    }
+    &__more-icon{
+        height: 16px;
+    }
+    &__chain-count{
+        display: flex;
+        align-items: center;
+    }
+    
+    &__progress{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        background-color: $maingreen;
+        width: 100%;
+    }
+    
+}
+.chain-count{
+    &__watch{
+        margin-right: 8px;
+    }
+}
