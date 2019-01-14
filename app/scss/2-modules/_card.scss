@@ -3,14 +3,17 @@
     border: 2px solid $maingreen;
     overflow: hidden;
     padding: 8px 24px;
-    background-color: rosybrown;
     position: relative;
 
+	@media (max-width: $phone){
+		padding: 4px 8px;
+	}
     
     &__header{
         display: flex;
         justify-content: space-between;
         align-items: center;
+		position: relative;
     }
     &__more-button{
         border: none;
@@ -30,14 +33,19 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        height: 4px;
+        height: 8px;
         background-color: $maingreen;
         width: 100%;
     }
     
 }
 .chain-count{
+	margin-top: 8px;
+	margin-bottom: 8px;
     &__watch{
         margin-right: 8px;
     }
+	&__days{
+		font-size: 14px;
+	}
 }

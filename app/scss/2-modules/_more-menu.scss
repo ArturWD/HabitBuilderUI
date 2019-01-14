@@ -1,0 +1,27 @@
+.more-menu{
+	position: absolute;
+	right: 0;
+	top: 100%;
+	z-index: 2;
+	padding: 8px 0;
+	border-radius: 8px;
+	background-color: $background;
+	border: 2px solid $maingreen;
+	min-width: 150px;
+	box-shadow: 0px 4px 15px rgba($textmain, .7);
+	transition: $statetransition;
+	
+		
+	&__item{
+		padding: 4px 24px;	
+		cursor: pointer;
+		&:hover{
+			background-color: $lightgreen;
+		}
+	}
+	
+	&--open{
+		
+	}
+	
+}
