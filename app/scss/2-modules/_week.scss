@@ -1,4 +1,16 @@
 .week{
-	display: flex;
-	justify-content: space-between;
+	
+	&__days{
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	&__mark-options{
+		margin-top: 10px;
+		
+		@media (max-width: $phone){
+			margin-top: 8px;
+		}
+	}
+	
 }
