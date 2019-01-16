@@ -34,7 +34,8 @@
 	position: relative;
 	transition: $statetransition;
 	transform: scale(0);
-	
+	opacity: .3;
+	position: relative;
 	@media (max-width:$phone){
 		justify-content: space-around;
 	}
@@ -72,6 +73,7 @@
 	
 	&--open{
 		transform: scale(1);
+		opacity: 1;
 	}
 	&--origin-1{
 		transform-origin: 5% top;
@@ -80,31 +82,37 @@
 		}
 	}
 	&--origin-2{
+		transform-origin: 22% top;
 		&:before{
 			@include origin(1);
 		}
 	}
 	&--origin-3{
+		transform-origin: 36% top;
 		&:before{
 			@include origin(2);
 		}
 	}
 	&--origin-4{
+		transform-origin: 50% top;
 		&:before{
 			@include origin(3);
 		}
 	}
 	&--origin-5{
+		transform-origin: 65% top;
 		&:before{
 			@include origin(4);
 		}
 	}
 	&--origin-6{
+		transform-origin: 80% top;
 		&:before{
 			@include origin(5);
 		}
 	}
 	&--origin-7{
+		transform-origin: 94% top;
 		&:before{
 			@include origin(6);
 		}
