@@ -15,4 +15,21 @@
 		padding: 0 8px;
 	}
 }
-
+.habit-preview-container{
+    display: flex;
+    
+    &__habit{
+        flex: 1;
+        margin-right: 24px;
+    }
+    
+    &__goal{
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 300px;
+        
+        @media (max-width: $tablet){
+            display: none;
+        }
+    }
+}
