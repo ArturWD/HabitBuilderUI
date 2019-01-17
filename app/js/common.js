@@ -48,6 +48,9 @@ $(function() {
 		var pos = determinePos($this);
 		
 		
+		$this.queueAddClass('day--click').delay(500).queueRemoveClass('day--click');
+		
+		
 		if ( options.hasClass('mark-options--open') &&  options.hasClass('mark-options--origin-'+pos)){
 			options.removeClass('mark-options--open');
 			chainCount.removeClass('card__chain-count--down');
@@ -59,6 +62,7 @@ $(function() {
             
             options.attr("data-identity", $this.attr("data-identity"));
 		}
+		
 		
 	});
     
@@ -99,3 +103,19 @@ function determinePos(child){
 		if ( $(curr)[0] == $(child)[0] ) return i+1;
 	}
 }
+
+$.fn.queueAddClass = function(className) {
+    this.queue('fx', function(next) {
+        $(this).addClass(className);
+        next();
+    });
+    return this;
+};
+
+$.fn.queueRemoveClass = function(className) {
+    this.queue('fx', function(next) {
+        $(this).removeClass(className);
+        next();
+    });
+    return this;
+};
