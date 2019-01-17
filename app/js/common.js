@@ -56,9 +56,28 @@ $(function() {
 			options.removeClassRegex(/^mark-options--origin-/);
 			options.addClass('mark-options--origin-'+pos);
 			chainCount.addClass('card__chain-count--down');
+            
+            options.attr("data-identity", $this.attr("data-identity"));
 		}
 		
-	})
+	});
+    
+    $('.mark-options__option').on('click', function(e){
+        var $this = $(e.currentTarget);
+        var options = $this.closest('.mark-options');
+        var id = options.attr('data-identity');
+        //console.log(id);
+        var day = $('.day[data-identity='+id+']');
+        day.removeClass('day--success day--fail day--skip day--unmarked');
+        
+        if ($this.hasClass('option--fail')){
+            day.addClass('day--fail');
+        } else if ($this.hasClass('option--success')){
+            day.addClass('day--success');
+        } else{
+            day.addClass('day--skip');
+        }
+    });
 
 });
 

@@ -14,8 +14,8 @@
 		padding-top: 11%;
 	}
 	@media (max-width: $phone){
-		width: 13%;
-		padding-top: 13%;
+		width: 11%;
+		padding-top: 11%;
 	}
 	
 	&--with-name{
@@ -41,6 +41,10 @@
 			top: 50%;
 			transform: translateY(-50%);
 			z-index: -1;
+            
+            @media (max-width: $phone){
+                height: 4px;
+            }
 		}
 	}
 	&--fail{
@@ -76,11 +80,15 @@
 			top: 50%;
 			transform: translateY(-50%);
 			z-index: -1;
+            
+            @media (max-width: $phone){
+                height: 4px;
+            }
 		}
 	}
 	&--note{
 		
-		&:before{
+		&:after{
 			content: '';
 			display: block;
 			position: absolute;
@@ -91,6 +99,7 @@
 			top: 0;
 			left: 0;
 			border: 4px solid $blue;
+            //z-index: 2;
 		}
 	}
 	&--today{
