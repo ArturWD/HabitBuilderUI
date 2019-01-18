@@ -1,0 +1,22 @@
+.goal{
+    display: flex;
+    align-items: center;
+    &__day{
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+    
+    &__progress{
+        margin-top: 16px;
+        margin-left: -5px;
+        height: 16px;
+        width: 100px;
+        background: linear-gradient(45deg, $maingreen 70%, lighten($textlight, 20) 70%);
+        flex: 1;
+        border-radius: 0 $radius $radius 0;
+        
+        &--margin{
+            margin-top: 24px;
+        }
+    }
+}

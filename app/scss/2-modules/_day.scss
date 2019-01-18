@@ -18,27 +18,12 @@
 		padding-top: 11%;
 	}
 	&--goal{
+        background-color: $maingreen;
 		padding-top: 0;
 		cursor: default;
-		position: static;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		height: 70px;
 		width: 70px;
-		
-		&:before{
-			content: '';
-			display: block;
-			position: absolute;
-			height: 16px;
-			width: 100%;
-			background-color: $maingreen;
-			left: 80%;
-			top: 50%;
-			transform: translateY(-50%);
-			z-index: -1;
-		}
+        
 	}
 	&--with-name{
 		margin-top: 24px;
@@ -169,10 +154,13 @@
 		}
 	}
 	&__progress{
-		position: static;
 		user-select: none;
 		color: $background;
 		font-size: 20px;
+        position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
 		
 		@media (max-width: $tablet){
 			font-size: 16px;

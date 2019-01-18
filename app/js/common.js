@@ -83,22 +83,28 @@ $(function() {
         }
     });
 	
-	resizeGoalDays();
+	resizeGoals();
 	$(window).resize(function(){
-		resizeGoalDays();
+		resizeGoals();
 	});
 });
 
 
-function resizeGoalDays(){
+function resizeGoals(){
 	var day = $('.week .day');
+    var bar = $('.week .day:before');
 	var size = day.width();
-	console.log(size);
+    bar.width('300px');
+	console.log(bar);
 	
 	var goals = $('.day--goal');
 	goals.width(size);
 	goals.height(size);
-}
+    
+    
+};
+
+
 
 $.fn.removeClassRegex = function(regex) {
   return $(this).removeClass(function(index, classes) {
