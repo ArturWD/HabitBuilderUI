@@ -82,11 +82,23 @@ $(function() {
             day.addClass('day--skip');
         }
     });
-
+	
+	resizeGoalDays();
+	$(window).resize(function(){
+		resizeGoalDays();
+	});
 });
 
 
-
+function resizeGoalDays(){
+	var day = $('.week .day');
+	var size = day.width();
+	console.log(size);
+	
+	var goals = $('.day--goal');
+	goals.width(size);
+	goals.height(size);
+}
 
 $.fn.removeClassRegex = function(regex) {
   return $(this).removeClass(function(index, classes) {

@@ -52,6 +52,7 @@
 
 	}
 	&__option-icon{
+		user-select: none;
 		margin-right: 16px;
 		height: 18px;
 		
@@ -64,6 +65,7 @@
 		}
 	}
 	&__option-name{
+		user-select: none;
 		font-size: 14px;
 		
 		@media (max-width:$phone){
