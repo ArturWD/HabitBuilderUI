@@ -10,6 +10,12 @@ $(function() {
 		$('.profile-button').removeClass('profile-button--pressed');
 	});
 	
+	$('.header__side-menu-button').on('click', function(e){
+		var $this = $(e.currentTarget);
+		
+		$this.queueAddClass('header__side-menu-button--click').delay(500).queueRemoveClass('header__side-menu-button--click');
+	});
+	
 	
 	//more menu
 	$('.more-menu-button').on('click', function(e){
@@ -37,6 +43,8 @@ $(function() {
 		} else{
 			header.removeClass('header--scrolled');
 		}
+		
+		$('.more-menu--open').removeClass('more-menu--open');
 	});
 	
 	
@@ -70,7 +78,6 @@ $(function() {
         var $this = $(e.currentTarget);
         var options = $this.closest('.mark-options');
         var id = options.attr('data-identity');
-        //console.log(id);
         var day = $('.day[data-identity='+id+']');
         day.removeClass('day--success day--fail day--skip day--unmarked');
         
@@ -87,6 +94,10 @@ $(function() {
 	$(window).resize(function(){
 		resizeGoals();
 	});
+	
+	$('.more-menu').mouseleave(function(e){
+		$(e.currentTarget).removeClass('more-menu--open');
+	});
 });
 
 
@@ -95,7 +106,6 @@ function resizeGoals(){
     var bar = $('.week .day:before');
 	var size = day.width();
     bar.width('300px');
-	console.log(bar);
 	
 	var goals = $('.day--goal');
 	goals.width(size);
