@@ -1,0 +1,51 @@
+.habit-tabs-container{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    color: $textlight;
+    margin-bottom: 32px;
+    
+    @media (max-width: $laptop){
+        font-size: 20px;
+    }
+    @media (max-width: $tablet){
+        font-size: 16px;
+    }
+    @media (max-width: $phone){
+        font-size: 14px;
+    }
+}
+.habit-tab{
+    -webkit-tap-highlight-color: transparent;
+    transition: all 150ms ease-in-out;
+    cursor: pointer;
+    position: relative;
+    line-height: 1;
+    
+    &:before, &:after{
+        content: '';
+        position: absolute;
+        display: block;
+        height: 2px;
+        left: 50%;
+        top: calc(100% + 4px);
+        width: 0%;
+        background-color: $maingreen;
+        transition: all 150ms ease-in-out;
+    }
+    &:after{
+        right: 50%;
+        left: auto;
+    }
+    
+    &--active{
+        color: $maingreen;
+        
+        &:before, &:after{        
+            width: 50%;        
+        }
+    }
+}

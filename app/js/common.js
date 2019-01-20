@@ -101,6 +101,20 @@ $(function() {
 	$('.more-menu').mouseleave(function(e){
 		$(e.currentTarget).removeClass('more-menu--open');
 	});
+    
+    
+    
+    
+    
+    
+    $('.habit-tab').on('click', function(e){
+        var $this = $(e.currentTarget);
+        
+        if (!$this.hasClass('habit-tab--active')){
+            $this.siblings().removeClass('habit-tab--active');
+            $this.addClass('habit-tab--active');
+        }
+    });
 });
 
 

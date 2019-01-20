@@ -56,17 +56,45 @@
     &__logo-imgfull{
         height: 40px;
         width: auto;
-		
+    
 		@media (max-width: $phone){
 			display: inline-block;
             height: 32px;
 		}
+        &--habit{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            @media (max-width: $tablet){
+                display: none;
+            }
+        }
     }
     &__logo-imgsmall{
         display: none;
 		@media (max-width: $phone){
 			display: none;
 		}
+    }
+    &__habit-title{
+        display: flex;
+        align-items: center;
+    }
+    &__habit-name{
+        font-size: 24px;
+        color: $maingreen;
+        
+        @media (max-width: $phone){
+            font-size: 20px;
+        }
+    }
+    &__back-link{
+        margin-right: 16px;
+        height: 24px;
+    }
+    &__back-arrow{
+        height: 24px;
     }
 	
 	@media (max-width: $tablet){

@@ -31,11 +31,14 @@
 
 	<!-- Custom HTML -->
     <header class="header">
-        <div class="header__side-menu-button">
-        	<img src="img/hamburger.svg" alt="" class="header__side-menu-button-img">
+        <div class="header__habit-title">
+            <a href="#" class="header__back-link">
+                <img src="img/left-arrow.svg" alt="" class="header__back-arrow">
+            </a>
+            <h3 class="header__habit-name">Зарядка</h3>
         </div>
         
-        <img src="img/LogoFull.svg" alt="" class="header__logo-imgfull">
+        <img src="img/LogoFull.svg" alt="" class="header__logo-imgfull header__logo-imgfull--habit">
         
         <div class="header__profile">
             <div class="profile-button">А</div>
@@ -64,7 +67,12 @@
     </header>
     
     <div class="main-container">
-    	
+    	<div class="habit-tabs-container">
+    	    <h3 class="habit-tab">Заметки</h3>
+    	    <h3 class="habit-tab">Цели</h3>
+    	    <h3 class="habit-tab habit-tab--active">Календарь</h3>
+    	    <h3 class="habit-tab">Прогресс</h3>
+    	</div>
     	<div class="calendar-view">
     		<div class="calendar-view__calendar">
     			
