@@ -14,6 +14,9 @@ $(function() {
 		var $this = $(e.currentTarget);
 		
 		$this.queueAddClass('header__side-menu-button--click').delay(500).queueRemoveClass('header__side-menu-button--click');
+        
+        $('.categories').toggleClass('categories--open');
+        
 	});
 	
 	

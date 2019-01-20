@@ -1,26 +1,3 @@
-.todayview-container{
-	display: flex;
-	min-height: 100vh;
-}
-.todayview-container__categories-spacer{
-	width: 250px;
-	transition: $statetransition;
-	
-	@media (max-width: $laptop){
-		width: 0;
-	}
-}
-.todayview-container__habits{
-	flex: 1;
-}
-
-
-
-
-
-
-
-
 
 .categories{
     position: fixed;
@@ -32,8 +9,10 @@
     padding-bottom: 16px;
     display: flex;
     flex-direction: column;
+    background-color: $background;
     transition: $statetransition;
-	
+	z-index: 2;
+    
     &__category{
         border-radius: 0 $radius $radius 0;
         
@@ -55,7 +34,17 @@
 	
 	@media (max-width: $laptop){
 		transform: translate(-100%,0);
+        height: calc(100vh - 48px);
+	    top: 48px;
 	}
+    
+    
+    &--open{
+        @media (max-width: $laptop){
+            box-shadow: 0px 0 25px $textlight;
+            transform: translate(0%,0);
+        }
+    }
 }
 
 
@@ -64,13 +53,13 @@
 }
 
 .categories::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba($textlight, .2); 
+    -webkit-box-shadow: inset 0 0 6px rgba($textlight, .4); 
     border-radius: 10px;
 }
 
 .categories::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba($textlight, .3); 
+    -webkit-box-shadow: inset 0 0 6px rgba($textlight, .4); 
 }
 .info-link{
     white-space: nowrap;

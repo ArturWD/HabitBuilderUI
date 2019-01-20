@@ -1,3 +1,19 @@
+.todayview-container{
+	display: flex;
+	min-height: 100vh;
+}
+.todayview-container__categories-spacer{
+	width: 250px;
+	transition: $statetransition;
+	
+	@media (max-width: $laptop){
+		width: 0;
+	}
+}
+.todayview-container__habits{
+	flex: 1;
+}
+
 .main-container{
 	width: 100%;
 	max-width: 1248px;
