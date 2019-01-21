@@ -115,6 +115,20 @@ $(function() {
             $this.addClass('habit-tab--active');
         }
     });
+	
+	
+	
+	
+	$(".habit-carousel").owlCarousel({
+		loop:false,
+		items:1,
+		autoHeight:true,
+		nav: false,
+		URLhashListener:true,
+        //autoplayHoverPause:true,
+        startPosition: 'calendar',
+		smartSpeed:500
+	});
 });
 
 
