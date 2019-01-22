@@ -56,6 +56,9 @@
 		margin-right: 16px;
 		height: 18px;
 		
+		@media (max-width: $laptop){
+			margin-right: 8px;
+		}
 		@media (max-width:$tablet){
 			margin: 0;
 		}

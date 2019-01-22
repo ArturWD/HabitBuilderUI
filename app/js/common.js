@@ -126,7 +126,7 @@ $(function() {
 		nav: false,
 		URLhashListener:true,
         //autoplayHoverPause:true,
-        startPosition: 'calendar',
+        startPosition: 2,
 		smartSpeed:500
 	});
 });
