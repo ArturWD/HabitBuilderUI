@@ -27,9 +27,15 @@
 		color: $textlight;
         display: none;
 	}
-	@media (max-width: $phone){
+    
+    @media (max-width: $laptop){
+        padding-top: 88px;
+    }
+	@media (max-width: $tablet){
+        padding-top: 60px;
+	}
+    @media (max-width: $phone){
 		padding: 0 8px;
-        padding-top: 72px;
 	}
 }
 .habit-preview-container{

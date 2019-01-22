@@ -1,7 +1,7 @@
 .habit-tabs-container{
 	position: -webkit-sticky;
 	position: sticky;
-	top: 65px;
+	top: 56px;
 	z-index: 2;
     width: 100%;
     max-width: 500px;
@@ -10,9 +10,9 @@
     justify-content: space-between;
     font-size: 24px;
     color: $textlight;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 	padding: 8px 2.5%;
-	border-radius: $radius;
+	border-radius: 0 0 $radius $radius;
 	
 	background-color: rgba($background, .9);
     
@@ -21,8 +21,12 @@
     }
     @media (max-width: $tablet){
         font-size: 18px;
+        top: 40px;
+        margin-bottom: 8px;
     }
     @media (max-width: $phone){
+        border-radius: 0;
+        background-color: rgba($background, 1);
         font-size: 14px;
     }
 }
