@@ -31,20 +31,9 @@
         height: 16px;
     }
     &__chain-count{
-		transition: $statetransition;
-		margin-top: 0px;       
+		margin-top: 4px;       
 		margin-bottom: 8px;
 		
-		@media (max-width:$tablet){
-			margin-top: -64px; 
-		}
-		@media (max-width:$phone){
-			margin-top: -42px; 
-		}
-		
-		&--down{
-			margin-top: 0px;
-		}
     }
     
     &__progress{
@@ -60,10 +49,46 @@
 	}
     
     &__name{
+		font-size: 18px;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+		-webkit-tap-highlight-color: transparent;
     }
+	
+	
+	&__create{
+		width: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+		
+		
+	}
+	&__create-title{
+		font-size: 18px;
+		color: $textlight;
+	}
+	&__create-btn{
+		background-color: transparent;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		margin-bottom: 16px;
+	}
+	&__create-icon{
+		height: 60px;
+		width: auto;
+	}
+	&__create-icon-path{
+		fill: $textlight;
+	}
+	
 	
     
 }
@@ -76,5 +101,6 @@
     }
 	&__days{
 		font-size: 14px;
+		-webkit-tap-highlight-color: transparent;
 	}
 }

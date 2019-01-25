@@ -6,12 +6,14 @@
         flex-shrink: 1;
 		flex-basis: 800px;
 		position: relative;
+		padding: 0 16px;
+		
+		@media (max-width: $phone){
+			padding: 0;
+		}
 	}
 	
 	&__pie{
-		position: -webkit-sticky;
-		position: sticky;
-		top: 100px;
 		background-color: mistyrose;
 		height: 100px;
 		flex-grow: 1;
@@ -25,12 +27,4 @@
 	}
 }
 
-.thing{
-	position: -webkit-sticky;
-	position: sticky;
-	height: 50px;
-	width: 50px;
-	background-color: green;
-	top: 100px;
-	left: 0;
-}
+

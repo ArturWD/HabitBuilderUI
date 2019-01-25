@@ -90,11 +90,12 @@
         }
     }
     &__back-link{
-        margin-right: 16px;
-        height: 24px;
+        margin-right: 8px;
+        height: 40px;
     }
     &__back-arrow{
-        height: 24px;
+        height: 40px;
+		padding: 8px;
     }
 	
 	@media (max-width: $tablet){

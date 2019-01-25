@@ -1,0 +1,18 @@
+
+.create-btn{
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	
+	&__create-btn__icon{
+		height: 60px;
+		width: auto;
+	}
+	&__create-btn__path{
+		fill: $textlight;
+	}
+}
+
+
+	

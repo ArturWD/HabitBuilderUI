@@ -5,7 +5,7 @@ body{
 	position: relative;
 	line-height: 1.65;
 	color: $textmain;
-	//overflow-x: hidden;
+	font-family: 'Roboto', sans-serif;
 }
 
 a{
@@ -17,5 +17,9 @@ a{
 }
 h1, h2, h3, h4 ,h5 , h6{
 	font-weight: normal;
+}
+.carousel-item{
+	min-height: 100vh;
+	padding-bottom: 100px;
 }
 

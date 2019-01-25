@@ -34,8 +34,9 @@
 	@media (max-width: $tablet){
         padding-top: 60px;
 	}
-    @media (max-width: $phone){
+    @media (max-width: $phone){	
 		padding: 0 8px;
+		padding-top: 60px;
 	}
 }
 .habit-preview-container{

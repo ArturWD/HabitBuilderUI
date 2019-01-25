@@ -48,10 +48,12 @@ $(function() {
 		}
 		
 		$('.more-menu--open').removeClass('more-menu--open');
+		
+		closeMarkOptions();
 	});
 	
 	
-	$('.day').on('click', function(e){
+	$('.day:not(.day--disabled)').on('click', function(e){
 		var $this = $(e.currentTarget);
         var week = $this.closest('.week');
 		var card = $this.closest('.card');
@@ -65,16 +67,16 @@ $(function() {
 		
 		
 		if ( options.hasClass('mark-options--open') &&  options.hasClass('mark-options--origin-'+pos)){
-			container.slideUp(200);
             options.removeClass('mark-options--open');
-			//chainCount.removeClass('card__chain-count--down');
+			container.slideUp(200);
             
 		} else{
+			closeMarkOptions(container);
+			
             container.slideDown(200);
 			options.addClass('mark-options--open');
 			options.removeClassRegex(/^mark-options--origin-/);
 			options.addClass('mark-options--origin-'+pos);
-			//chainCount.addClass('card__chain-count--down');
             
             options.attr("data-identity", $this.attr("data-identity"));
             
@@ -108,10 +110,7 @@ $(function() {
 		$(e.currentTarget).removeClass('more-menu--open');
 	});
     
-    
-    
-    
-    
+       
     
     $('.habit-tab').on('click', function(e){
         var $this = $(e.currentTarget);
@@ -131,16 +130,34 @@ $(function() {
 		autoHeight:true,
 		nav: false,
 		URLhashListener:true,
-        //autoplayHoverPause:true,
-        startPosition: 2,
-		smartSpeed:500
+        startPosition: 1,
+		smartSpeed:400
 	});
     
-    
-    
-    
+     
+	
+	
+	$('.owl-carousel').on('changed.owl.carousel', function(event) {
+		var current = event.item.index;
+		var hash = $(event.target).find(".owl-item").eq(current).find(".carousel-item").attr('data-hash');
+		var link = $('.habit-tab[href="#'+hash+'"]');
+		link.siblings().removeClass('habit-tab--active');
+		link.addClass('habit-tab--active');
+	});
+	
+	
+	$('.categories__category:not(.categories__edit)').on('click', function(e){
+		var $this = $(e.currentTarget);
+		$this.siblings().removeClass('categories__category--active');
+		$this.addClass('categories__category--active');
+	});
+	
 });
 
+function closeMarkOptions(opened){
+	$('.mark-options--open').removeClass('mark-options--open');
+	$('.week__mark-options-container').not(opened).slideUp(200);
+};
 
 function resizeGoals(){
 	var day = $('.week .day');

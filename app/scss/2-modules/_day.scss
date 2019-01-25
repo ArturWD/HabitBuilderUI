@@ -63,11 +63,15 @@
 		}
 	}
 	&--unmarked{
-		background-color: $textlight;
+		background-color: lighten($textmain, 50);
 		transition: $statetransition;
 		&:hover{
-			background-color: darken($textlight, 7);
+			background-color: darken(lighten($textmain, 30), 7);
 		}
+	}
+	&--disabled{
+		background-color: lighten($textmain, 50);
+		cursor: default;
 	}
 	&--skip{
 		background-color: $orange;

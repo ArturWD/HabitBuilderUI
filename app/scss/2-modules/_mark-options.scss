@@ -27,7 +27,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 8px 24px;
+	padding: 0px 24px;
 	border-radius: $radius;
 	background-color: $maingreen;
 	color: $background;
@@ -45,7 +45,7 @@
 		display: flex;
 		align-items: center;
 		cursor: pointer;
-		
+		padding: 8px 0;
 		@media (max-width:$tablet){
 			flex-direction: column;
 		}
