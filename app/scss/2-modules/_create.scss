@@ -6,6 +6,9 @@
 	border-radius: $radius;
 	box-shadow: 0 0 0 1000px $textlight;
 	
+    @media (max-width: $phone){
+        border-radius: 0;
+    }
 	&__create-header{
 		background-color: $maingreen;
 	}
@@ -65,6 +68,10 @@
 		width: auto;
 		display: block;
 		height: 40px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
 	}
 	&__back-arrow{
 		height: 24px;

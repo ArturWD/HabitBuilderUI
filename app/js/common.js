@@ -1,5 +1,17 @@
 $(function() {
-
+    var magnificPopup = $.magnificPopup.instance;
+    $('.open-popup-link').magnificPopup({
+        type:'inline',
+        closeOnBgClick: true,
+        showCloseBtn: false,
+        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    });
+    
+    $('#closepopup').on('click', function(){
+        magnificPopup.close();
+        console.log(123);
+    });
+    
 	// PROFILE MENU
 	$('.profile-button').on('click', function(e){
 		$(e.currentTarget).offsetParent().find('.profile-menu').addClass('profile-menu--open');
