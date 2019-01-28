@@ -102,15 +102,22 @@
             </div>
         </div>
         <div class="todayview-container__habits">
-            <div class="main-container">
+            <div class="main-container main-container--habit-preview">
                 
                 <h3 class="main-container__placeholder">У вас пока нет привычек.<br> Начните формировать новые уже сейчас.</h3>
+                
+                <button class="create-btn create-btn--red">
+					<svg class="create-btn__icon"  width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="create-btn__path create-btn__path--white" fill-rule="evenodd" clip-rule="evenodd" d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="#4D4A51"/>
+					</svg>
+				</button>
+                
                 
                 
                 <div class="habit-preview-container">
                     <div class="habit-preview-container__habit card">
 						<div class="card__header">
-							<h3 class="card__name">Зарядка</h3>
+							<a href="habit.html" class="card__name">Зарядка</a>
 							<button class="card__more-button more-menu-button">
 								<img src="img/more.svg" alt="" class="card__more-icon">     
 							</button>
@@ -209,7 +216,7 @@
                 <div class="habit-preview-container">
                     <div class="habit-preview-container__habit card">
 						<div class="card__header">
-							<h3 class="card__name">Английский</h3>
+							<a href="habit.html" class="card__name">Английский</a>
 							<button class="card__more-button more-menu-button">
 								<img src="img/more.svg" alt="" class="card__more-icon">     
 							</button>
@@ -285,14 +292,15 @@
                     <div class="habit-preview-container__goal card">
                     	<div class="card__create">
                     		<button class="card__create-btn create-btn">
-                    			<svg class="card__create-icon"  width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path class="card__create-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="#4D4A51"/>
+                    			<svg class="card__create-icon create-btn__icon--big"  width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="card__create-icon-path create-btn__path" fill-rule="evenodd" clip-rule="evenodd" d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="#4D4A51"/>
 								</svg>
                     		</button>
                     		<div class="card__create-title">У этой привычки нет целей</div>
                     	</div>
                     </div>
                 </div>
+                
                 
                 
             </div>

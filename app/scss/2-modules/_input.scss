@@ -1,0 +1,99 @@
+
+
+.input{
+	position:relative; 
+	width: 100%;
+	margin-bottom: 24px;
+	
+	&__field{
+		width: 100%;
+		font-size:16px;
+		padding: 8px 8px 8px 5px;
+		display:block;
+		border:none;
+		border-bottom: 1px solid $textmain;
+		transition: $statetransition;
+		background: transparent;
+		
+		&:focus{
+			outline: none;
+			border-bottom:1px solid transparent;
+		}
+	}
+	&__checkbox{
+		display: none;
+	}
+	&--day{
+		margin: 0;
+		width: 32px;
+	}
+	&__checkbox:checked ~ &__day{
+		background-color: $maingreen;
+		transition: $statetransition;
+
+		&:hover{
+			background-color: darken($maingreen, 7);
+		}
+	}
+	&__highlight{
+		position:absolute;
+		height:60%; 
+		width:100px; 
+		top:25%; 
+		left:0;
+		pointer-events:none;
+		opacity:0.5;
+	}
+	&__field:focus ~ &__highlight {
+		animation:inputHighlighter 0.3s ease;
+	}
+	
+	
+	&__bar{
+		position:relative; 
+		display:block; 
+		width: 100%;
+		
+		&:before, &:after{
+			content:'';
+			height:2px; 
+			width:0;
+			bottom:1px; 
+			position:absolute;
+			background: $maingreen; 
+			transition: $statetransition; 
+		}
+		&:before{
+			left:50%;
+		}
+		&:after{
+			right:50%; 
+		}
+	}
+	&__field:focus ~ &__bar:before, &__field:focus ~ &__bar:after{
+		width:50%;
+	}
+	
+	
+	&__label{
+		color: $textmain; 
+		font-size:16px;
+		font-weight:normal;
+		position:absolute;
+		pointer-events:none;
+		left:5px;
+		top:10px;
+		transition: $statetransition; 
+	}
+	&__field:focus ~ &__label, &__field:valid ~ &__label{
+		top:-16px;
+		font-size:14px;
+		color: $maingreen;
+	}
+}
+
+
+@keyframes inputHighlighter {
+	from { background: $maingreen; }
+  to 	{ width:0; background:transparent; }
+}

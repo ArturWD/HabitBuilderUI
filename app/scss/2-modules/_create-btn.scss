@@ -4,13 +4,81 @@
 	border: none;
 	outline: none;
 	cursor: pointer;
-	
-	&__create-btn__icon{
-		height: 60px;
-		width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	-webkit-tap-highlight-color: transparent;
+	&__icon{
+		height: 32px;
+		width: 32px;
+		@media (max-width: $tablet){
+			height: 24px;
+			width: 24px;
+		}
+		
+		&--big{
+			height: 64px;
+			width: 64px;
+		}
+		&--small{
+			
+		}
 	}
-	&__create-btn__path{
+	&__path{
 		fill: $textlight;
+		
+		&--white{
+			fill: $background;
+		}
+	}
+	&--red{
+		position: sticky;
+		top: calc(100vh - 100px);	
+		left: 100%;
+		background-color: $red;
+		border-radius: 50%;
+		padding: 16px;
+		width: 64px;
+		height: 64px;
+		margin-bottom: -64px;
+		z-index: 6;
+		transition: $statetransition;
+		
+		&:hover{
+			background-color: darken($red, 7);
+			box-shadow: 0 4px 20px rgba($textmain, .7);
+		}
+		
+		@media (max-width: $tablet){
+			height: 56px;
+			width: 56px;
+			padding: 8px;
+			margin-bottom: -56px;
+		}
+		@media (max-width: $phone){
+			top: calc(100vh - 70px);
+			height: 48px;
+			width: 48px;
+			padding: 8px;
+			margin-bottom: -48px;
+		}
+	}
+	
+	&--small{
+		background-color: $red;
+		border-radius: 50%;
+		padding: 4px;
+		width: 32px;
+		height: 32px;
+		transition: $statetransition;
+		position: relative;
+		left: 50%;
+		transform: translate(-50%);
+		
+		&:hover{
+			background-color: darken($red, 7);
+			box-shadow: 0 4px 20px rgba($textmain, .7);
+		}
 	}
 }
 

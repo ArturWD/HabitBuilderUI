@@ -171,6 +171,26 @@
 			font-size: 16px;
 		}
 	}
+		
+	&--input{
+		margin: 0;
+		font-size: 14px;
+		line-height: 1;
+		margin: 0;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		height: 32px;
+		width: 32px;
+		color: $background;
+		background-color: lighten($textmain, 50);
+		transition: $statetransition;
+		&:hover{
+			background-color: darken(lighten($textmain, 30), 7);
+		}
+	}
 	
 }
 

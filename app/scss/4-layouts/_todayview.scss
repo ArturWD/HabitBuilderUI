@@ -20,12 +20,17 @@
 	padding: 0 24px;
 	margin: 0 auto;
 	padding-top: 88px;
-	
+	position: relative;
+	min-height: 100vh;
 	&__placeholder{
 		font-size: 24px;
 		text-align: center;
 		color: $textlight;
         display: none;
+	}
+	
+	&--habit-preview{
+		padding-bottom: 100px;
 	}
     
     @media (max-width: $laptop){
@@ -43,6 +48,7 @@
     margin-bottom: 24px;
     display: flex;
     
+	
     @media (max-width: $phone){
         margin-bottom: 16px;
     }

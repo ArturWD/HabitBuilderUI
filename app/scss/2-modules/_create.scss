@@ -1,0 +1,87 @@
+.create-window{
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	overflow: hidden;
+	border-radius: $radius;
+	box-shadow: 0 0 0 1000px $textlight;
+	
+	&__create-header{
+		background-color: $maingreen;
+	}
+	
+	&__create-form{
+		background-color: $background;
+		display: block;
+		padding: 24px;
+		
+		@media (max-width: $phone){
+			padding: 24px 16px;
+		}
+	}
+}
+
+.create-form{
+	&__submit-button{
+		color: $background;
+		cursor: pointer;
+		background-color: $maingreen;
+		padding: 8px 32px;
+		border-radius: $radius;
+		margin-top: 32px;
+		border: none;
+		position: relative;
+		left: 100%;
+		transform: translate(-100%);
+		
+		&:hover{
+			background-color: darken($maingreen, 7);
+		}
+		
+	}
+	&__group-title{
+		color: $maingreen;
+		margin-bottom: 16px;
+		margin-top: 16px;
+	}
+	&__schedule{
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.create-header{
+	&__top{
+		padding: 8px 16px;
+		display: flex;
+		align-items: center;
+		
+		@media (max-width: $phone){
+			padding: 8px 8px;
+		}
+	}
+	&__back-link{
+		padding: 8px;
+		width: auto;
+		display: block;
+		height: 40px;
+	}
+	&__back-arrow{
+		height: 24px;
+	}
+	&__title{
+		color: $background;
+		line-height: 1;
+		font-size: 16px;
+	}
+	&__img{
+		display: block;
+		margin: 0 auto;
+		padding-top: 16px;
+		padding-bottom: 24px;
+		
+		@media (max-width: $phone){
+			display: none;
+		}
+	}
+}

@@ -152,6 +152,16 @@ $(function() {
 		$this.addClass('categories__category--active');
 	});
 	
+	
+	$("#addReason").on('click', function(e){
+		$(".create-form__reasons").append('<div class="input">'+      
+							'<input class="input__field" type="text" required pattern="*">'+
+							'<span class="input__highlight"></span>'+
+							'<span class="input__bar"></span>'+
+							'<label class="input__label">Причина</label>'+
+						'</div>');
+	});
+	
 });
 
 function closeMarkOptions(opened){

@@ -3,6 +3,7 @@
     border: 2px solid $maingreen;
     overflow: hidden;
     padding: 8px 24px;
+	padding-top: 4px;
     position: relative;
 	display: flex;
 	flex-direction: column;
@@ -54,6 +55,16 @@
         overflow: hidden;
         white-space: nowrap;
 		-webkit-tap-highlight-color: transparent;
+		cursor: pointer;
+		transition: $statetransition;
+		color: $textmain;
+		flex: 1;
+		margin-right: 16px;
+		padding: 8px 0;
+		
+		&:hover{
+			color: $maingreen;
+		}
     }
 	
 	
@@ -75,19 +86,9 @@
 		color: $textlight;
 	}
 	&__create-btn{
-		background-color: transparent;
-		border: none;
-		outline: none;
-		cursor: pointer;
 		margin-bottom: 16px;
 	}
-	&__create-icon{
-		height: 60px;
-		width: auto;
-	}
-	&__create-icon-path{
-		fill: $textlight;
-	}
+
 	
 	
     
