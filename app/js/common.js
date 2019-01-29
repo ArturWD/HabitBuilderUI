@@ -1,17 +1,32 @@
 $(function() {
+	
+	window.addEventListener("load", function() { window. scrollTo(0, 0); });
+	document.addEventListener("touchmove", function(e) { e.preventDefault() });
+	
     var magnificPopup = $.magnificPopup.instance;
-    $('.open-popup-link').magnificPopup({
+    $('#createHabitBtn').magnificPopup({
         type:'inline',
         closeOnBgClick: true,
         showCloseBtn: false,
-        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+        midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+		// Delay in milliseconds before popup is removed
+		removalDelay: 300,
+
+		// Class that is added to popup wrapper and background
+		// make it unique to apply your CSS animations just to this exact popup
+		mainClass: 'mfp-fade'
     });
+	$('.create-form').on('submit', function(){
+		magnificPopup.close();
+	});
     
     $('#closepopup').on('click', function(){
         magnificPopup.close();
-        console.log(123);
     });
     
+	
+	
+	
 	// PROFILE MENU
 	$('.profile-button').on('click', function(e){
 		$(e.currentTarget).offsetParent().find('.profile-menu').addClass('profile-menu--open');
