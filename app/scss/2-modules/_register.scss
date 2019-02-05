@@ -1,0 +1,62 @@
+.register{
+	position: relative;
+	height: 100vh;
+	
+	&__center-block{
+		width: 100%;
+		max-width: 400px;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		
+		@media (max-width: $phone){
+			top: 0;
+			transform: translate(-50%, 0%);
+			position: relative;
+		}
+	}
+	&__form{
+		border: 2px solid $maingreen;
+		border-radius: $radius;
+		overflow: hidden;
+		box-shadow: 0px 8px 65px rgba($textmain, .7);
+		
+		@media (max-width: $phone){
+			box-shadow: none;
+			border-radius: 0;
+			border: none;
+		}
+	}
+	&__inputs{
+		padding: 16px;
+		padding-top: 32px;
+
+	}
+	&__header{
+		display: block;
+		background-color: $maingreen;
+		padding: 16px;
+		color: $background;
+	}
+	&__error ul{
+		font-size: 14px;
+		color: $red;
+		display: block;
+		margin-top: -16px;
+		margin-left: 16px;
+		margin-bottom: 16px;
+	}
+	
+	&__additional{
+		font-size: 14px;
+		margin-top: 24px;
+		display: block;
+		margin-left: 16px;
+		color: $maingreen;
+		&:hover{
+			color: darken($maingreen, 10);
+		}
+	}
+	
+}

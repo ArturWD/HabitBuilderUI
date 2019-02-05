@@ -7,7 +7,9 @@ body{
 	color: $textmain;
 	font-family: 'Roboto', sans-serif;
 }
-
+.background-green{
+	background-color: $maingreen;
+}
 a{
     text-decoration: none;
     color: $textlight;
