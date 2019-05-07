@@ -173,16 +173,12 @@ $(function() {
 	});
 	
 	
-	$('.categories__category:not(.categories__edit)').on('click', function(e){
-		var $this = $(e.currentTarget);
-		$this.siblings().removeClass('categories__category--active');
-		$this.addClass('categories__category--active');
-	});
+	
 	
 	
 	$("#addReason").on('click', function(e){
 		$(".create-form__reasons").append('<div class="input">'+      
-							'<input class="input__field" type="text" required pattern="*">'+
+							'<input class="input__field" type="text" required pattern=".*" name="Reasons[]">'+
 							'<span class="input__highlight"></span>'+
 							'<span class="input__bar"></span>'+
 							'<label class="input__label">Причина</label>'+
