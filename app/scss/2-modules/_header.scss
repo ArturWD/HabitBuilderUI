@@ -84,9 +84,19 @@
     &__habit-name{
         font-size: 24px;
         color: $maingreen;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+        max-width: 450px;
         
-        @media (max-width: $phone){
-            font-size: 20px;
+		@media (max-width: $laptop){
+            max-width: 300px;
+			font-size: 20px;
+        }
+		@media (max-width: $phone){
+            font-size: 18px;
+			max-width: 200px;
         }
     }
     &__back-link{

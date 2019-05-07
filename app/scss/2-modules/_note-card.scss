@@ -1,0 +1,44 @@
+.note-card{
+	border-radius: $radius;
+    border: 2px solid $maingreen;
+    padding: 0px 24px;
+	width: calc(33% - 11px) ;
+	padding-bottom: 16px;
+	color: $textmain;
+	margin-bottom: 16px;
+	
+	@media (max-width: $tablet){
+		width: calc(50% - 9px) ;
+	}
+	@media (max-width: 650px){
+		width: 100% ;
+	}
+	&__header{
+		color: $textmain;
+		font-size: 18px;
+		margin-bottom: 0px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		padding: 8px 0px;
+		cursor: pointer;
+		transition: $statetransition;
+		display: block;
+		
+		&:hover{
+			color: $maingreen;
+		}
+	}
+	&__note{
+		margin-top: -8px;
+		font-size: 16px;
+		
+	}
+	&__footer{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 16px;
+		position: relative;
+	}
+}

@@ -1,4 +1,41 @@
 .note-view{
-	height: 500px;
-	background-color: orange;
+	min-height: 500px;
+	position: relative;
+}
+
+.preloader{
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	
+	&__circle{
+		background : $maingreen;
+		height: 30px;
+		width: 30px;
+		border-radius: 50%;
+		display: inline-block;
+		margin: 0 10px;
+		opacity: 0;
+	}
+}
+
+.zoom {
+  animation: zoom 1s infinite;
+}
+
+@keyframes zoom{
+  0%{
+    opacity: 1;
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(1);
+  }
+  
+  100%{
+    opacity: 1;
+    transform: scale(0);
+  }
 }

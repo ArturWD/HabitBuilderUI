@@ -238,3 +238,81 @@ $.fn.queueRemoveClass = function(className) {
     });
     return this;
 };
+
+
+
+
+
+
+
+
+
+//NOTE JS
+var notePopup = $.magnificPopup.instance;
+    $('.note-card__header').magnificPopup({
+        type:'inline',
+        closeOnBgClick: true,
+        showCloseBtn: false,
+        midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+		// Delay in milliseconds before popup is removed
+		removalDelay: 300,
+
+		// Class that is added to popup wrapper and background
+		// make it unique to apply your CSS animations just to this exact popup
+		mainClass: 'mfp-fade'
+    });
+	$('.create-form').on('submit', function(){
+		notePopup.close();
+	});
+    
+    $('#closeNotePopup').on('click', function(){
+        notePopup.close();
+    });
+
+/*
+$('.note-view').masonry({
+	// set itemSelector so .grid-sizer is not used in layout
+	itemSelector: '.note-card',
+	// use element for option
+	//columnWidth: '.note-card',
+	percentPosition: true,
+	//horizontalOrder: true
+	gutter: 16,
+	initLayout: true,
+	resize: true,
+	containerStyle: null
+});
+window.dispatchEvent(new Event('resize'));
+*/
+
+//PRELOADER
+let circles = document.getElementsByClassName("preloader__circle");
+let n = 0;
+for(let i = 0; i <circles.length; i++){
+  setTimeout( () => {
+   circles[i].classList.add("zoom");
+  }, n);
+  n = n +200;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
