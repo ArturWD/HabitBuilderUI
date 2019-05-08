@@ -248,6 +248,7 @@ $.fn.queueRemoveClass = function(className) {
 
 
 //NOTE JS
+/*
 var notePopup = $.magnificPopup.instance;
     $('.note-card__header').magnificPopup({
         type:'inline',
@@ -269,7 +270,7 @@ var notePopup = $.magnificPopup.instance;
         notePopup.close();
     });
 
-/*
+
 $('.note-view').masonry({
 	// set itemSelector so .grid-sizer is not used in layout
 	itemSelector: '.note-card',
@@ -283,7 +284,7 @@ $('.note-view').masonry({
 	containerStyle: null
 });
 window.dispatchEvent(new Event('resize'));
-*/
+
 
 //PRELOADER
 let circles = document.getElementsByClassName("preloader__circle");
@@ -294,6 +295,10 @@ for(let i = 0; i <circles.length; i++){
   }, n);
   n = n +200;
 }
+
+
+*/
+
 
 
 
